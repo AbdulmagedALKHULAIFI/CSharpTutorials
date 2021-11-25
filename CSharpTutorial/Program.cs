@@ -12,16 +12,16 @@ namespace CSharpTutorial
             //g.showExample();
 
             //Delegate example
-            //Delegate d = new Delegate();
-            //d.showExample();
+            Delegate d = new Delegate();
+            d.showExample();
 
             //Multithread example
             //MultiThread mt = new MultiThread();
             //mt.showExample();
 
             //Deadlock example
-            DeadLock dl = new DeadLock();
-            dl.showExample();
+            //DeadLock dl = new DeadLock();
+            //dl.showExample();
         }
     }
 }

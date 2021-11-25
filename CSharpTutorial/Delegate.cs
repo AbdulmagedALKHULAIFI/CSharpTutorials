@@ -5,6 +5,7 @@ using System.Text;
 namespace CSharpTutorial
 {
     delegate int NumberChanger(int n);
+    delegate void AnonymousCaller(int n);
     class Delegate
     {
 
@@ -33,12 +34,17 @@ namespace CSharpTutorial
             NumberChanger nc1 = new NumberChanger(AddNum);
             NumberChanger nc2 = new NumberChanger(MultNum);
 
+
+            //#################################
+            //calling delegate
+            //#################################
             nc1(5);
             // 10 + 5 = 15
             Console.WriteLine("Value of Num: {0}", getNum());
 
-
-            //calling multicast 
+            //#################################
+            //calling multicast
+            //#################################
             nc = nc1;
             nc += nc2;
 
@@ -47,8 +53,26 @@ namespace CSharpTutorial
             // 100
             Console.WriteLine("Value of Num: {0}", getNum());
 
+            //#################################
+            //Anonymous method
+            //#################################
+            AnonymousCaller anym = delegate (int x) {
+                Console.WriteLine("Anonymous Method: {0}", x);
+            };
 
+            anym(10);
 
+            //#################################
+            //Anonymous method return value
+            //#################################
+            Func<int, int> del = delegate (int x)
+            {
+                return x * x;
+
+            };
+
+            int p = del(4);
+            Console.WriteLine("Anonymous Method returned value: {0}", p);
         }
     }
 }
