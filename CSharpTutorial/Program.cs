@@ -12,8 +12,8 @@ namespace CSharpTutorial
             //g.showExample();
 
             //Delegate example
-            Delegate d = new Delegate();
-            d.showExample();
+            //Delegate d = new Delegate();
+            //d.showExample();
 
             //Multithread example
             //MultiThread mt = new MultiThread();
@@ -22,6 +22,10 @@ namespace CSharpTutorial
             //Deadlock example
             //DeadLock dl = new DeadLock();
             //dl.showExample();
+
+            //Collections example
+            Collections collection = new Collections();
+            collection.showExample();
         }
     }
 }
