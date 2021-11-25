@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSharpTutorial.Collections;
+using System;
 
 namespace CSharpTutorial
 {
@@ -24,8 +25,8 @@ namespace CSharpTutorial
             //dl.showExample();
 
             //Collections example
-            Collections collection = new Collections();
-            collection.showExample();
+            //ListExample list = new ListExample();
+            //list.showExample();
         }
     }
 }
