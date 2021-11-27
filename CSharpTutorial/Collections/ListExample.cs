@@ -26,7 +26,20 @@ namespace CSharpTutorial.Collections
 
         public void MergeTwoListsWithoutDuplicates()
         {
-            list1.AddRange(list2);
+            result = list1;
+            result.AddRange(list2);
+
+
+            //Naive 
+            var tmp = new List<T> { };
+            foreach (var item in result.Distinct())
+                tmp.Add(item);
+            result = tmp;
+
+            // sophisticated
+            //result = result.GroupBy(x => x)
+            //    .Select(x => x.First()).ToList();
+
         }
         public void SortList()
         {
