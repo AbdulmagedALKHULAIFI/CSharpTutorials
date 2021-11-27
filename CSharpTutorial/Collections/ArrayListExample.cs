@@ -6,16 +6,22 @@ using System.Linq;
 
 namespace CSharpTutorial.Collections
 {
-    class ArrayListExample : Icollection
+    public class ArrayListExample : Icollection
     {
-        ArrayList list1;
-        ArrayList list2;
-        ArrayList result;
+        public ArrayList arrayList1;
+        public ArrayList arrayList2;
+        public ArrayList result;
 
+        public ArrayListExample()
+        {
+            arrayList1 = new ArrayList();
+            arrayList1 = new ArrayList();
+            result = new ArrayList();
+        }
         public ArrayListExample(ArrayList l1, ArrayList l2)
         {
-            list1 = l1;
-            list2 = l2;
+            arrayList1 = l1;
+            arrayList2 = l2;
         }
 
         public void showExample()
@@ -25,11 +31,26 @@ namespace CSharpTutorial.Collections
 
         public void MergeTwoListsWithoutDuplicates()
         {
-            //result = list1.Union(list2).ToArray(); 
+            //Add all items in first list 
+            foreach(var item in arrayList1)
+            {
+                if (arrayList2.Contains(item))
+                {
+                    result.Add(item);
+                    arrayList2.Remove(item);
+                }
+                else
+                    result.Add(item);
+            }
+
+            //Add unique items from second list
+            foreach (var item in arrayList2)
+                result.Add(item);
         }
+
         public void SortList()
         {
-            throw new NotImplementedException();
+            result.Sort() ;
         }
 
         void DisplayArrayListExample()

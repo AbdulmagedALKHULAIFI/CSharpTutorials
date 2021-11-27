@@ -29,7 +29,6 @@ namespace CSharpTutorial.Collections
             result = list1;
             result.AddRange(list2);
 
-
             //Naive 
             var tmp = new List<T> { };
             foreach (var item in result.Distinct())
@@ -43,7 +42,7 @@ namespace CSharpTutorial.Collections
         }
         public void SortList()
         {
-            throw new NotImplementedException();
+            result.Sort(); ;
         }
 
         public bool VerifyItemInList<T>(List<T> items, T item) { return items.Any(x => x.Equals(item)); }
