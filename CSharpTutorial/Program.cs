@@ -5,9 +5,12 @@ namespace CSharpTutorial
 {
     class Program
     {
-        static void Main(string[] args)
-        {
 
+       
+        static void Main(string[] args)
+        {         
+
+            // ------------------------------------------
             //Generic example 
             //Generic<int> g = new Generic<int>();
             //g.showExample();
