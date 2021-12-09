@@ -28,7 +28,7 @@ namespace CSharpTutorial.Algos
 
         //To find the first place from where to take box
         // and also the first place to put the box on , from left to right
-        public Tuple<int, int> findFirstPositions(int[] list, int capacity)
+        public Tuple<int, int> FindFirstPositions(int[] list, int capacity)
         {
             int toTake = -1, toPut = -1;
 
@@ -53,7 +53,7 @@ namespace CSharpTutorial.Algos
         }
 
         //To verify if boxes are equally distributed
-        public bool verifyEqualDistrbution(int[] list, int equalSize)
+        public bool VerifyEqualDistrbution(int[] list, int equalSize)
         {
             foreach (var item in list)
                 if (item > equalSize || item < equalSize)
@@ -77,10 +77,10 @@ namespace CSharpTutorial.Algos
             // position capacity in odrer to have an equal distrubtion
             capacity = totalBoxes / boxes.Length;
 
-            while (!verifyEqualDistrbution(boxes, capacity))
+            while (!VerifyEqualDistrbution(boxes, capacity))
             {
                 //find postitions
-                Tuple<int, int> position = findFirstPositions(boxes, capacity);
+                Tuple<int, int> position = FindFirstPositions(boxes, capacity);
 
                 //Move claw to the pick position
                 result += move(clawPos, position.Item1);
