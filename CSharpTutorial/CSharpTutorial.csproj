@@ -9,6 +9,7 @@
     <Folder Include="Documentation\" />
     <Folder Include="Linq\" />
     <Folder Include="Log\" />
+    <Folder Include="Lamda\" />
     <Folder Include="Stack trace\" />
   </ItemGroup>
 

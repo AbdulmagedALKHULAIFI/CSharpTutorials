@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace TestTutorial
 {
-    class TestArrayList
+    class ArrayListTest
     {
         ArrayListExample arrayList;
 
