@@ -10,6 +10,8 @@ namespace CSharpTutorial
         static void Main(string[] args)
         {         
 
+
+
             // ------------------------------------------
             //Generic example 
             //Generic<int> g = new Generic<int>();

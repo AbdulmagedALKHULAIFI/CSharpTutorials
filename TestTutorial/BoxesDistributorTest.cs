@@ -29,20 +29,6 @@ namespace TestTutorial
             Assert.AreEqual("PICK|RIGHT|PUT|LEFT|PICK|RIGHT|RIGHT|PUT|"
                             , result);
 
-            boxes = new int[] { 3, 0, 0 };
-            result = boxDistributor.solve(3, boxes, false);
-            Assert.AreEqual("LEFT|PICK|LEFT|LEFT|PUT|"
-                            , result);
-
-            boxes = new int[] { 2, 0, 0 };
-            result = boxDistributor.solve(0, boxes, false);
-            Assert.AreEqual("PICK|RIGHT|PUT|"
-                , result);
-
-            boxes = new int[] { 1, 0, 0 };
-            result = boxDistributor.solve(0, boxes, false);
-            Assert.AreEqual(""
-                , result);
 
             boxes = new int[] { 1, 2, 7, 2 };
             result = boxDistributor.solve(0, boxes, false);

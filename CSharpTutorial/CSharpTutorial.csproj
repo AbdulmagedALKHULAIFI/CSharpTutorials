@@ -8,6 +8,8 @@
   <ItemGroup>
     <Folder Include="Documentation\" />
     <Folder Include="Linq\" />
+    <Folder Include="Log\" />
+    <Folder Include="Stack trace\" />
   </ItemGroup>
 
 </Project>
