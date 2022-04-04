@@ -10,12 +10,12 @@ namespace TestTutorial
 {
     class AnagramSolverTest
     {
-        AnagramSolver anagramSolver;
+        DistributionSolver anagramSolver;
 
         [SetUp]
         public void Setup()
         {
-            anagramSolver = new AnagramSolver();
+            anagramSolver = new DistributionSolver();
         }
 
         [Test]

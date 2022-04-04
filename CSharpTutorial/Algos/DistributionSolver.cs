@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CSharpTutorial.Algos
 {
-    public class AnagramSolver
+    public class DistributionSolver
     {
 
         public bool IsAnagram(string wordOne, string wordTwo)

@@ -8,11 +8,21 @@ namespace CSharpTutorial
 
        
         static void Main(string[] args)
-        {         
+        {
+
 
 
 
             // ------------------------------------------
+
+            // Polymorphisme Example
+            //PolymorphismeExample pl = new PolymorphismeExample();
+            //pl.ShowExample();
+
+            // HashSet example 
+            //HashSetExample hs = new HashSetExample();
+            //hs.showExample();
+
             //Generic example 
             //Generic<int> g = new Generic<int>();
             //g.showExample();
