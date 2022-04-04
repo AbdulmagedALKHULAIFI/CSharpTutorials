@@ -1,5 +1,7 @@
-﻿using CSharpTutorial.Collections;
+﻿using CSharpTutorial.Algos;
+using CSharpTutorial.Collections;
 using System;
+using System.Collections.Generic;
 
 namespace CSharpTutorial
 {
@@ -11,7 +13,9 @@ namespace CSharpTutorial
         {
 
 
+            LinkedListSwapper swapper = new LinkedListSwapper();
 
+            ListNode nodes = swapper.CreateLinkedListFromList(new List<int>() { 7, 9, 6, 6, 7, 8, 3, 0, 9, 5 });
 
             // ------------------------------------------
 
