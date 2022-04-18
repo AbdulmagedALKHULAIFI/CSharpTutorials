@@ -69,11 +69,11 @@ namespace CSharpTutorial.Algos
             int length = 0;
             Dictionary<char, int> charDict = new Dictionary<char, int>();
 
-            for (int CurrentCharIndex = 0, subStringStart = 0 ; CurrentCharIndex < s.Length; ++CurrentCharIndex)
+            for (int CurrentCharIndex = 0, subStringStart = 0; CurrentCharIndex < s.Length; ++CurrentCharIndex)
             {
                 if (charDict.ContainsKey(s[CurrentCharIndex]))
                 {
-                    subStringStart = Math.Max(subStringStart,charDict[s[CurrentCharIndex]]+1);
+                    subStringStart = Math.Max(subStringStart, charDict[s[CurrentCharIndex]] + 1);
                     charDict.Remove(s[CurrentCharIndex]);
                 }
 
@@ -90,8 +90,42 @@ namespace CSharpTutorial.Algos
 
             return 0;
         }
+
+
+        public string ZigZagConverter(string s, int numRows)
+        {
+            if (numRows == 1)
+                return s;
+
+            int indexDistance = DistanceCalculator(numRows);
+            string result = string.Empty;
+            int leveldistance;
+            int advance = 0;
+
+            // rows
+            for (int j = numRows; j > 0; j--)
+            {
+                leveldistance = DistanceCalculator(j);
+
+                //columns
+                for (int i = advance; i < s.Length; i = i + indexDistance)
+                {
+                    result += s[i];
+
+                    if (i + leveldistance < s.Length && leveldistance != indexDistance && leveldistance > 0)
+                        result += s[i + leveldistance];
+                }
+                advance++;
+            }
+            return result;
+        }
+
+        public int DistanceCalculator(int levelNumber)
+        {
+            return 2 * (levelNumber - 1);
+        }
     }
-    
+
 
 
     public class ListNode

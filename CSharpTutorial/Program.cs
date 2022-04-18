@@ -15,7 +15,7 @@ namespace CSharpTutorial
 
             AlgosReslover resolver = new AlgosReslover();
 
-            int result = resolver.LengthOfLongestSubstring("bbbbbb");
+            string result = resolver.ZigZagConverter("PAYPALISHIRING", 3);
 
             // ------------------------------------------
 
