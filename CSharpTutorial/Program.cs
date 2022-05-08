@@ -2,20 +2,48 @@
 using CSharpTutorial.Collections;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CSharpTutorial
 {
     class Program
     {
 
-       
+        public static char[][] ConvertToJaggedArray(char[,] twoDimensionalArray)
+        {
+            int rowsFirstIndex = twoDimensionalArray.GetLowerBound(0);
+            int rowsLastIndex = twoDimensionalArray.GetUpperBound(0);
+            int numberOfRows = rowsLastIndex - rowsFirstIndex + 1;
+
+            int columnsFirstIndex = twoDimensionalArray.GetLowerBound(1);
+            int columnsLastIndex = twoDimensionalArray.GetUpperBound(1);
+            int numberOfColumns = columnsLastIndex - columnsFirstIndex + 1;
+
+            char[][] jaggedArray = new char[numberOfRows][];
+            for (int i = 0; i < numberOfRows; i++)
+            {
+                jaggedArray[i] = new char[numberOfColumns];
+
+                for (int j = 0; j < numberOfColumns; j++)
+                {
+                    jaggedArray[i][j] = twoDimensionalArray[i + rowsFirstIndex, j + columnsFirstIndex];
+                }
+            }
+            return jaggedArray;
+        }
+
         static void Main(string[] args)
         {
 
 
+
             AlgosReslover resolver = new AlgosReslover();
 
-            string result = resolver.ZigZagConverter("PAYPALISHIRING", 3);
+            char[,] input = new char[,] { { '.', '8', '7', '6', '5', '4', '3', '2', '1' }, { '2', '.', '.', '.', '.', '.', '.', '.', '.' }, { '3', '.', '.', '.', '.', '.', '.', '.', '.' }, { '4', '.', '.', '.', '.', '.', '.', '.', '.' }, { '5', '.', '.', '.', '.', '.', '.', '.', '.' }, { '6', '.', '.', '.', '.', '.', '.', '.', '.' }, { '7', '.', '.', '.', '.', '.', '.', '.', '.' }, { '8', '.', '.', '.', '.', '.', '.', '.', '.' }, { '9', '.', '.', '.', '.', '.', '.', '.', '.' } };
+
+            char[][] jagged = ConvertToJaggedArray(input);
+
+            bool result = resolver.IsValidSudoku(jagged);
 
             // ------------------------------------------
 

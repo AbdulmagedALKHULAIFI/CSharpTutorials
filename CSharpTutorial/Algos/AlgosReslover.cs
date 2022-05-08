@@ -124,10 +124,74 @@ namespace CSharpTutorial.Algos
         {
             return 2 * (levelNumber - 1);
         }
+
+        public bool IsValidSudoku(char[][] board)
+        {
+            HashSet<char> columns = new HashSet<char>();
+            HashSet<char> rows = new HashSet<char>();
+
+
+            //Check columns
+            for (int i = 0; i < 9; i++)
+            {
+                columns.Clear();
+                columns = new HashSet<char>();
+
+                rows.Clear();
+                rows = new HashSet<char>();
+
+                for (int j = 0; j < 9; j++)
+                {
+                    //Check columns
+                    if (columns.Contains(board[i][j]))
+                        return false;
+
+                    if (board[i][j] != '.')
+                        columns.Add(board[i][j]);
+
+
+                    //Check rows
+                    if (rows.Contains(board[j][i]))
+                        return false;
+
+                    if (board[j][i] != '.')
+                        rows.Add(board[j][i]);
+                    
+                }
+            }
+
+            //Check sub-boxes
+            for (int i = 0; i < 9; i = i + 3)
+            {
+                for (int j = 0; j < 9; j = j + 3)
+                {
+                    if (!CheckSubBox(i, j, board))
+                        return false;
+                }
+            }
+
+            return true;
+        }
+
+        private bool CheckSubBox(int i, int j, char[][] board)
+        {
+            HashSet<char> subBox = new HashSet<char>();
+            for (int m = i; m < i + 3; m++)
+            {
+                for (int n = j; n < j + 3; n++)
+                {
+                    if (subBox.Contains(board[m][n]))
+                        return false;
+
+                    if (board[m][n] != '.')
+                        subBox.Add(board[m][n]);
+                }
+            }
+            return true;
+        }
     }
 
-
-
+    #region classes
     public class ListNode
     {
         public int val;
@@ -138,4 +202,6 @@ namespace CSharpTutorial.Algos
             this.next = next;
         }
     }
+
+    #endregion
 }
