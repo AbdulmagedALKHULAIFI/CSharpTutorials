@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace CSharpTutorial.Algos
 {
@@ -123,6 +124,49 @@ namespace CSharpTutorial.Algos
         public int DistanceCalculator(int levelNumber)
         {
             return 2 * (levelNumber - 1);
+        }
+
+
+        public bool IsPalindrome(string s)
+        {
+            // Remove non alphabetic characters 
+            string cleanedString = Regex.Replace(s, "[^A-Za-z0-9]", "");
+
+            // If string is empty
+            if (cleanedString == string.Empty)
+                return true;
+            
+            int i = 0;
+            int j = cleanedString.Length - 1;
+
+            // "<" => to avoid the error in the case with string "aa"
+            while (i < j)
+            {
+                if ( String.Compare(cleanedString[i].ToString(), cleanedString[j].ToString(), true) != 0)
+                    return false;
+                i++;
+                j--;
+            }
+
+            return true;
+        }
+
+        public int[] TwoSum(int[] nums, int target)
+        {
+            int[] solutionIndices = new int [2];
+
+            for (int i = 0; i < nums.Length; i++)
+                for (int j = i + 1; j < nums.Length ; j++) {
+                    
+                    if(nums[i] + nums[j] == target)
+                    {
+                        solutionIndices[0] = i;
+                        solutionIndices[1] = j;
+
+                        break;
+                    }
+                }
+            return solutionIndices;
         }
 
         public bool IsValidSudoku(char[][] board)

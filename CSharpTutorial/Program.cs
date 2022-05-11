@@ -39,13 +39,19 @@ namespace CSharpTutorial
 
             AlgosReslover resolver = new AlgosReslover();
 
-            char[,] input = new char[,] { { '.', '8', '7', '6', '5', '4', '3', '2', '1' }, { '2', '.', '.', '.', '.', '.', '.', '.', '.' }, { '3', '.', '.', '.', '.', '.', '.', '.', '.' }, { '4', '.', '.', '.', '.', '.', '.', '.', '.' }, { '5', '.', '.', '.', '.', '.', '.', '.', '.' }, { '6', '.', '.', '.', '.', '.', '.', '.', '.' }, { '7', '.', '.', '.', '.', '.', '.', '.', '.' }, { '8', '.', '.', '.', '.', '.', '.', '.', '.' }, { '9', '.', '.', '.', '.', '.', '.', '.', '.' } };
 
-            char[][] jagged = ConvertToJaggedArray(input);
-
-            bool result = resolver.IsValidSudoku(jagged);
-
+            var result = resolver.IsPalindrome("A man, a plan, a canal -- Panama");
+            Console.WriteLine("finished");
             // ------------------------------------------
+
+            //int[] result = resolver.TwoSum(new int [] { 3, 3 },6);
+
+            //char[,] input = new char[,] { { '.', '8', '7', '6', '5', '4', '3', '2', '1' }, { '2', '.', '.', '.', '.', '.', '.', '.', '.' }, { '3', '.', '.', '.', '.', '.', '.', '.', '.' }, { '4', '.', '.', '.', '.', '.', '.', '.', '.' }, { '5', '.', '.', '.', '.', '.', '.', '.', '.' }, { '6', '.', '.', '.', '.', '.', '.', '.', '.' }, { '7', '.', '.', '.', '.', '.', '.', '.', '.' }, { '8', '.', '.', '.', '.', '.', '.', '.', '.' }, { '9', '.', '.', '.', '.', '.', '.', '.', '.' } };
+
+            //char[][] jagged = ConvertToJaggedArray(input);
+
+            //bool result = resolver.IsValidSudoku(jagged);
+
 
             // Polymorphisme Example
             //PolymorphismeExample pl = new PolymorphismeExample();
