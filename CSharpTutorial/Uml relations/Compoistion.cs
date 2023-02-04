@@ -13,11 +13,11 @@ namespace CSharpTutorial.Uml_relations
         }
     }
 
-    class Car
+    class ElectricalCar
     {
         private Engine engine;
 
-        public Car()
+        public ElectricalCar()
         {
             engine = new Engine();
         }
@@ -32,7 +32,7 @@ namespace CSharpTutorial.Uml_relations
     {
         static void Main(string[] args)
         {
-            Car car = new Car();
+            ElectricalCar car = new ElectricalCar();
             car.StartEngine();
             Console.ReadLine();
         }
