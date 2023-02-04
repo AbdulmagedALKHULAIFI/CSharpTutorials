@@ -10,6 +10,7 @@
     <Folder Include="Linq\" />
     <Folder Include="Log\" />
     <Folder Include="Lamda\" />
+    <Folder Include="Resources\Design Patterns\Factory\" />
     <Folder Include="Stack trace\" />
   </ItemGroup>
 
