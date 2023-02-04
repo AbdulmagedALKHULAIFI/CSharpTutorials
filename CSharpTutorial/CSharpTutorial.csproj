@@ -11,6 +11,7 @@
     <Folder Include="Log\" />
     <Folder Include="Lamda\" />
     <Folder Include="Resources\Design Patterns\Factory\" />
+    <Folder Include="Resources\Uml\" />
     <Folder Include="Stack trace\" />
   </ItemGroup>
 
