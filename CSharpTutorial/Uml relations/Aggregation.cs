@@ -28,7 +28,7 @@ namespace CSharpTutorial.Uml_relations
 
     class ProgramAggregation
     {
-        static void Main(string[] args)
+        public ProgramAggregation(string[] args)
         {
             University university = new University("University of ABC");
 

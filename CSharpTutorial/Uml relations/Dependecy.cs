@@ -31,9 +31,9 @@ namespace CSharpTutorial.Uml_relations
         }
     }
 
-    class Program
+    class Dependency
     {
-        static void Main(string[] args)
+        public Dependency(string[] args)
         {
             Logger logger = new Logger();
             Car car = new Car(logger);

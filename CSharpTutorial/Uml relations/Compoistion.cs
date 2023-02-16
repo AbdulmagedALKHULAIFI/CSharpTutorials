@@ -30,7 +30,7 @@ namespace CSharpTutorial.Uml_relations
 
     class ProgramCompoisition
     {
-        static void Main(string[] args)
+        public ProgramCompoisition(string[] args)
         {
             ElectricalCar car = new ElectricalCar();
             car.StartEngine();

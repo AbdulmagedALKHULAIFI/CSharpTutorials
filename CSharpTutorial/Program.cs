@@ -1,48 +1,52 @@
 ﻿using CSharpTutorial.Algos;
 using CSharpTutorial.Collections;
+using CSharpTutorial.Examples;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace CSharpTutorial
 {
-    class Program
+   public class Program
     {
 
-        public static char[][] ConvertToJaggedArray(char[,] twoDimensionalArray)
-        {
-            int rowsFirstIndex = twoDimensionalArray.GetLowerBound(0);
-            int rowsLastIndex = twoDimensionalArray.GetUpperBound(0);
-            int numberOfRows = rowsLastIndex - rowsFirstIndex + 1;
+        //public static char[][] ConvertToJaggedArray(char[,] twoDimensionalArray)
+        //{
+        //    int rowsFirstIndex = twoDimensionalArray.GetLowerBound(0);
+        //    int rowsLastIndex = twoDimensionalArray.GetUpperBound(0);
+        //    int numberOfRows = rowsLastIndex - rowsFirstIndex + 1;
 
-            int columnsFirstIndex = twoDimensionalArray.GetLowerBound(1);
-            int columnsLastIndex = twoDimensionalArray.GetUpperBound(1);
-            int numberOfColumns = columnsLastIndex - columnsFirstIndex + 1;
+        //    int columnsFirstIndex = twoDimensionalArray.GetLowerBound(1);
+        //    int columnsLastIndex = twoDimensionalArray.GetUpperBound(1);
+        //    int numberOfColumns = columnsLastIndex - columnsFirstIndex + 1;
 
-            char[][] jaggedArray = new char[numberOfRows][];
-            for (int i = 0; i < numberOfRows; i++)
-            {
-                jaggedArray[i] = new char[numberOfColumns];
+        //    char[][] jaggedArray = new char[numberOfRows][];
+        //    for (int i = 0; i < numberOfRows; i++)
+        //    {
+        //        jaggedArray[i] = new char[numberOfColumns];
 
-                for (int j = 0; j < numberOfColumns; j++)
-                {
-                    jaggedArray[i][j] = twoDimensionalArray[i + rowsFirstIndex, j + columnsFirstIndex];
-                }
-            }
-            return jaggedArray;
-        }
+        //        for (int j = 0; j < numberOfColumns; j++)
+        //        {
+        //            jaggedArray[i][j] = twoDimensionalArray[i + rowsFirstIndex, j + columnsFirstIndex];
+        //        }
+        //    }
+        //    return jaggedArray;
+        //}
 
         static void Main(string[] args)
         {
 
+            RetryExample retryer = new RetryExample();
 
+            retryer.TestMethod();
 
-            AlgosReslover resolver = new AlgosReslover();
-
-
-            var result = resolver.IsPalindrome("A man, a plan, a canal -- Panama");
-            Console.WriteLine("finished");
             // ------------------------------------------
+            //AlgosReslover resolver = new AlgosReslover();
+
+            //var result = resolver.IsPalindrome("A man, a plan, a canal -- Panama");
+            //Console.WriteLine("finished");
+
+
 
             //int[] result = resolver.TwoSum(new int [] { 3, 3 },6);
 
