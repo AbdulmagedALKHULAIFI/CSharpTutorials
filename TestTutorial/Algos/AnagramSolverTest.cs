@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestTutorial
+namespace TestTutorial.Algos
 {
     class AnagramSolverTest
     {
@@ -24,7 +24,7 @@ namespace TestTutorial
             string firstWord = "a b c";
             string secondWord = "a b d";
 
-            Assert.IsFalse(anagramSolver.IsAnagram(firstWord,secondWord));
+            Assert.IsFalse(anagramSolver.IsAnagram(firstWord, secondWord));
         }
 
     }

@@ -4,14 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using  CSharpTutorial.Algos;
+using CSharpTutorial.Algos;
 
-namespace TestTutorial
+namespace TestTutorial.Algos
 {
     class OrderTest
     {
         //SuperClients superClients;
-        
+
         //[SetUp]
         //public void Setup()
         //{
