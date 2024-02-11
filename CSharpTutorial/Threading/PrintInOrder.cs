@@ -25,14 +25,14 @@ public class Foo
     public void Second(Action printSecond)
     {
         // printSecond() outputs "second". Do not change or remove this line.
-        s1.WaitAsync();
+        s1.Wait();
         printSecond();
         s2.Release();
     }
 
     public void Third(Action printThird)
     {
-        s2.WaitAsync();
+        s2.Wait();
         // printThird() outputs "third". Do not change or remove this line.
         printThird();
         s2.Release();
